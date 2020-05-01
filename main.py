@@ -12,7 +12,7 @@ if(not os.path.exists(image_output)):
 
 # loop through all images in image_folder
 for filename in os.listdir(image_folder):
-    if(filename.endswith("jpg")):
+    if(filename.endswith("jpg") or filename.endswith("png")):
         img = Image.open(f"{image_folder}{filename}")
         name = os.path.splitext(filename)[0]
         # convert image to greyscale and save it
